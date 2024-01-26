@@ -17,17 +17,4 @@ public class LocalDateTimeTypeAdapter implements JsonSerializer<LocalDateTime>, 
     public LocalDateTime deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context) throws JsonParseException {
         return LocalDateTime.parse(json.getAsString(), formatter);
     }
-
-    ExclusionStrategy strategy = new ExclusionStrategy() {
-        @Override
-        public boolean shouldSkipField(FieldAttributes fieldAttributes) {
-            return false;
-        }
-
-        @Override
-        public boolean shouldSkipClass(Class<?> clazz) {
-            return clazz == Event.class;
-        }
-    };
-
 }
