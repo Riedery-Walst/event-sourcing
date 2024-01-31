@@ -1,7 +1,5 @@
 package ru.andreev.ufanet.event;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.google.gson.annotations.SerializedName;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -18,7 +16,6 @@ public class Event {
     private String eventType;
     private UUID entityId;
     private String eventData;
-    @SerializedName("registeredDateTime")
     private LocalDateTime dateTime;
 
     @PrePersist

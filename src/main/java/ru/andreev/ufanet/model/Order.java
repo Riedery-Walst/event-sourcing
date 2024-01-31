@@ -1,6 +1,5 @@
 package ru.andreev.ufanet.model;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import lombok.Data;
 import ru.andreev.ufanet.event.*;
 
@@ -57,4 +56,5 @@ public class Order {
         this.employeeId = event.getEmployeeId();
         this.cancelDescription = event.getCancelDescription();
     }
+
 }

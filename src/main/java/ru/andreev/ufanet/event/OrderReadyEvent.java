@@ -12,5 +12,4 @@ import java.util.UUID;
 public class OrderReadyEvent extends Event {
     private UUID orderId;
     private int employeeId;
-    private LocalDateTime dateTime;
 }
